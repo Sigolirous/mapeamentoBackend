@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Criar Relato</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label for="dataAgressao">Data: </label>
+            <input class="form-control" type="date" name="dataAgresssao" id="dataAgressao">
+        </div>
+        <div class="form-group">
+            <label for="local">Local: </label>
+            <input class="form-control" type="text" name="local" id="local">
+        </div>
+        <div class="form-group">
+            <label for="descricaoLocal">Descrição do Local</label>
+            <input class="form-control" type="text" name="descricaoLocal" id="descricaoLocal">
+        </div>
+        <div class="form-group">
+            <label for="conheciaAgressor">Você conhecia seu agressor?</label>
+            <select class="form-control" name="conheceAgressor" id="conheceAgressor">
+                <option value="sim" onclick="someElemento('labelAgressor', 0)" selected="selected">Sim</option>
+                <option value="0" onclick="someElemento('labelAgressor', 1), relacaoNenhuma()" onclick="">Não</option>
+            </select>
+        </div>
+        <div id="labelAgressor">
+            <div class="form-group">
+                <label for="relacaoAgressor">Qual sua relação com o agressor?</label>
+                <input class="form-control" type="text" name="relacaoAgressor" id="relacaoAgressor">
+            </div>
+            <div class="form-group">
+                <label for="religiaoAgressor">Qual a religião do agressor?</label>
+                <input class="form-control" type="text" name="religiaoAgressorr" id="religiaoAgressor">
+            </div>
+            <div class="form-group">
+                <label for="identidadeGeneroAgressor">Qual a identidade de gênero do agressor?</label>
+                <input class="form-control" type="text" name="identidadeGeneroAgressor" id="identidadeGeneroAutor">
+            </div>
+            <div class="form-group">
+                <label for="orientacaoSexualAgressor">Qual a orientação sexual do agressor?</label>
+                <input class="form-control" type="text" name="orientacaoSexualAgressor" id="orientacaoSexualAgressor">
+            </div>
+            <div class="form-group">
+                <label for="sexoAgressor">Qual o sexo do agressor?</label>
+                <input class="form-control" type="text" name="sexoAgressor" id="sexoAgressor">
+            </div>
+            <div class="form-group">
+                <label for="escolaridadeAutor">Qual a escolaridade do autor?</label>
+                <select name="escolaridadeAutor" id="escolaridadeAutor" class="form-control">
+                    <option value="fundamental incompleto">Fundamental Incompleto</option>
+                    <option value="fundamental completo">Fundamental Completo</option>
+                    <option value="médio incompleto">Médio Incompleto</option>
+                    <option value="médio completo">Médio Completo</option>
+                    <option value="superior incompleto">Superior Incompleto</option>
+                    <option value="superior completo">Superior Completo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="profissaoAgressor">Qual a profissão do agressor?</label>
+                <input type="text" name="profissaoAgressor" id="profissaoAgressor" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="nacionalidadeAgressor">Qual a nacionalidae do agressor?</label>
+                <input type="text" name="nacionalidadeAgressor" id="nacionalidadeAgressor" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="etniaAgressor">Qual a etnia do agressor?</label>
+                <input type="text" class="form-control" name="etniaAgressor" id="etniaAgressor">
+            </div>
+            <div class="form-group">
+                <label for="idadeAgressor">Qual a idade do agressor?</label>
+                <input type="number" class="form-control" name="idadeAgressor" id="idadeAgressor">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="idadeDataFato">Quantos anos você tinha quando foi agrededida(o)</label>
+            <input type="number" class="form-control" name="idadeDataFato" id="idadeDataFato">
+        </div>
+        <div class="form-group">
+            <label for="idadeAtual">Quantos anos você tinha quando foi agrededida(o)</label>
+            <input type="number" class="form-control" name="idadeAtual" id="idadeAtual">
+        </div>
+        <div class="form-group">
+            <label for="tipoDeViolencia">Qual foi o tipo de violência que você sofreu?</label>
+            <select name="tipoDeViolencia" id="tipoDeViolencia" class="form-control">
+                <option value="Sexual" selected="selected">Sexual</option>
+                <option value="Psicológica">Psicológica</option>
+                <option value="Física">Física</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="religiao">Qual a sua religião?</label>
+            <input class="form-control" type="text" name="religiao" id="religiao">
+        </div>
+        <div class="form-group">
+            <label for="identidadeGenero">Qual a sua identidade de gênero?</label>
+            <input class="form-control" type="text" name="identidadeGenero" id="identidadeGenero">
+        </div>
+        <div class="form-group">
+            <label for="orientacaoSexual">Qual a sua orientação sexual?</label>
+            <input class="form-control" type="text" name="orientacaoSexual" id="orientacaoSexual">
+        </div>
+        <div class="form-group">
+            <label for="sexo">Qual o seu sexo?</label>
+            <input class="form-control" type="text" name="sexo" id="sexo">
+        </div>
+        <div class="form-group">
+            <label for="escolaridade">Qual a sua escolaridade?</label>
+            <select name="escolaridade" id="escolaridade" class="form-control">
+                <option value="fundamental incompleto">Fundamental Incompleto</option>
+                <option value="fundamental completo">Fundamental Completo</option>
+                <option value="médio incompleto">Médio Incompleto</option>
+                <option value="médio completo">Médio Completo</option>
+                <option value="superior incompleto">Superior Incompleto</option>
+                <option value="superior completo">Superior Completo</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="profissao">Qual a sua profissão?</label>
+            <input type="text" name="profissao" id="profissao" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="nacionalidade">Qual a sua nacionalidae?</label>
+            <input type="text" name="nacionalidade" id="nacionalidade" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="etnia">Qual a sua etnia?</label>
+            <input type="text" class="form-control" name="etnia" id="etnia">
+        </div>
+        <div class="form-group">
+            <label for="deficiencia">Você tem alguma deficiencia??</label>
+            <select name="deficiencia" class="form-control" id="deficiencia">
+                <option value="Sim">Sim</option>
+                <option value="Não" selected="selected">Não</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="violenciaInstitucional">Você sofreu violência institucional?</label>
+            <select name="violenciaInstitucional" class="form-control" id="violenciaInstitucional">
+                <option value="Sim">Sim</option>
+                <option value="Não" selected="selected">Não</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="fezDenuncia">Você fez a denúncia de agressão?</label>
+            <select name="fezDenuncia" class="form-control" id="fezDenuncia">
+                <option value="Sim" selected="selected" onclick="someElemento('labelDenuncia', 1)">Sim</option>
+                <option value="Não" onclick="someElemento('labelDenuncia', 0)">Não</option>
+            </select>
+        </div>
+        <div id="labelDenuncia" style="display: none;">
+            <div class="form-group">
+                <label for="motivoNaoDenuncia">Por que você não denunciou?</label>
+                <input type="text" name="motivoNaoDenuncia" id="motivoNaoDenuncia" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="relatoMaoLivre">Relato à mão livre</label>
+            <textarea name="retaloMaoLivre" id="relatoMaoLivre" class="form-control" cols="30" rows="10"></textarea>
+            <button onclick="enviarRelato()">Enviar relato</button>
+        </div>
+    </div>
+    <script src="./src/criarRelato.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.relatos{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: auto;
+  align-content: start
+}
+.relatos:after{
+  display: block;
+  margin: 10px;
+  flex: 999 999 auto;
+}
+
+.relato{
+  width: 18rem;
+  text-justify: newspaper;
+  margin: 10px
+}
+
+.relatoMLivre{
+  width: 18rem;
+  height: 12rem;
+  word-wrap: break-word;
+}
